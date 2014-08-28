@@ -13,13 +13,11 @@
     <link rel="stylesheet" href="assets/borrowers.css">
   </head>
   <body>
-    <script>
-      window.BorrowersENV = {{ENV}};
-      window.EmberENV = window.BorrowersENV.EmberENV;
-    </script>
     <script src="assets/vendor.js"></script>
     <script src="assets/borrowers.js"></script>
     <script>
+      window.BorrowersENV = require('borrowers/config/environment')['default'];
+      window.EmberENV = window.BorrowersENV.EmberENV;
       window.Borrowers = require('borrowers/app')['default'].create(BorrowersENV.APP);
     </script>
   </body>
