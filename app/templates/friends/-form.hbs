@@ -1,25 +1,11 @@
 <form {{action "save" on="submit"}}>
   <h2>{{errorMessage}}</h2>
-  <p>
-    <label>First Name:
-      {{input value=firstName}}
-    </label>
-  </p>
-  <p>
-    <label>Last Name:
-      {{input value=lastName }}
-    </label>
-  </p>
-  <p>
-    <label>Email:
-      {{input value=email}}
-    </label>
-  </p>
-  <p>
-    <label>twitter
-      {{input value=twitter}}
-    </label>
-  </p>
-  <input type="submit" value="Save"}}/>
-  <button {{action "cancel"}}>Cancel</button>
+  <fieldset>
+    {{input value=firstName placeholder='First Name'}}</br>
+    {{input value=lastName  placeholder='Last Name'}}</br>
+    {{input value=email placeholder='email'}}</br>
+    {{input value=twitter placeholder='twitter'}}</br>
+    <input type="submit" value="Save" class="primary">
+    <button {{action "cancel"}}>Cancel</button>
+  </fieldset>
 </form>

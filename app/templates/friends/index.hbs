@@ -1,11 +1,8 @@
-<h1>Friends Index</h1>
-
-<h2>Friends: {{length}}</h2>
-
-<table>
+<table class="primary">
   <thead>
     <tr>
       <th>Name</th>
+      <th>Articles</th>
       <th></th>
     </tr>
   </thead>
@@ -13,6 +10,7 @@
     {{#each}}
       <tr>
         <td>{{link-to fullName "friends.show" this}}</td>
+        <td>{{totalArticles}}</td>
         <td><a href="#" {{action "delete" this}}>delete</a></td>
       </tr>
     {{/each}}
