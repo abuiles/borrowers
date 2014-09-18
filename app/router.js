@@ -1,7 +1,8 @@
 import Ember from 'ember';
+import config from './config/environment';
 
 var Router = Ember.Router.extend({
-  location: BorrowersENV.locationType
+  location: config.locationType
 });
 
 Router.map(function() {
@@ -10,7 +11,6 @@ Router.map(function() {
     this.route('show', { path: ':friend_id' });
     this.route('edit', { path: ':friend_id/edit' });
   });
-
 });
 
 export default Router;
