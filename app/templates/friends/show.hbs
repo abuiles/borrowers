@@ -1,12 +1,23 @@
-<div class="friend-profile">
-  <p>{{firstName}}</p>
-  <p>{{lastName}}</p>
-  <p>{{email}}</p>
-  <p>{{twitter}}</p>
-  <p>{{link-to 'Lend article' 'articles.new'}}</p>
-  <p>{{link-to 'Edit info' 'friends.edit' this}}</p>
-  <p><a href="#" {{action "delete" this}}>delete</a></p>
+<div class="friend-profile" class="row">
+  <div class="friend-info full">
+    <img src="http://www.fillmurray.com/300/300">
+    <div>
+      <p>{{fullName}}</p>
+      <p>{{email}}</p>
+      <p>{{twitter}}</p>
+      <ul class="friend-profile-links">
+        <li>{{link-to 'Edit info' 'friends.edit' this}}</li>
+        <li>{{link-to 'Lend article' 'articles.new'}}</li>
+        <li><a href="#" {{action "delete" this}}>Delete</a></li>
+      </ul>
+    </div>
+    <label class="checkbox">
+      <input type="checkbox">
+      <span>Show returned</span>
+    </label>
+  </div>
 </div>
+
 <div class="articles-container">
   {{outlet}}
 </div>

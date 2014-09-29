@@ -10,3 +10,24 @@ body {
 table {
   width: 100%;
 }
+
+.friend-profile{
+  text-align: left;
+}
+
+.friend-profile img {
+  float:left;
+  margin:1em 2em 1em 1em;
+}
+
+.friend-profile .checkbox {
+  clear:both;
+  display:block;
+  margin:1em;
+}
+
+.friend-profile-links li {
+  display: inline;
+  list-style-type: none;
+  padding-right: 20px;
+}
