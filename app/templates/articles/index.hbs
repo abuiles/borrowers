@@ -13,7 +13,7 @@
       <tr>
         <td>{{description}}</td>
         <td>{{notes}}</td>
-        <td>{{createdAt}}</td>
+        <td>{{formatted-date createdAt 'LL'}}</td>
         <td>{{view Ember.Select content=states selection=state}}</td>
         <td>
           {{#if isSaving}}

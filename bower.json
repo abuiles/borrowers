@@ -13,6 +13,7 @@
     "ember-qunit": "0.1.8",
     "ember-qunit-notifications": "0.0.4",
     "qunit": "~1.15.0",
-    "picnic": "https://github.com/picnicss/picnic.git"
+    "picnic": "https://github.com/picnicss/picnic.git",
+    "moment": "~2.8.3"
   }
 }
