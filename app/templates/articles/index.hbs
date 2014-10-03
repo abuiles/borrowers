@@ -2,18 +2,24 @@
   <thead>
     <tr>
       <th>Description</th>
+      <th>Notes</th>
       <th>Borrowed since</th>
       <th></th>
       <th></th>
     </tr>
   </thead>
   <tbody>
-    {{#each}}
+    {{#each itemController='articles/item'}}
       <tr>
         <td>{{description}}</td>
+        <td>{{notes}}</td>
         <td>{{createdAt}}</td>
-        <td></td>
-        <td></td>
+        <td>{{view Ember.Select content=states selection=state}}</td>
+        <td>
+          {{#if isSaving}}
+            <p>Saving ...</p>
+          {{/if}}
+        </td>
       </tr>
     {{/each}}
   </tbody>
