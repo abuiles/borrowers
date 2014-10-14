@@ -2,6 +2,9 @@
 
 module.exports = function(environment) {
   var ENV = {
+    contentSecurityPolicy: {
+      'img-src': "'self' www.fillmurray.com",
+    },
     modulePrefix: 'borrowers',
     environment: environment,
     baseURL: '/',
