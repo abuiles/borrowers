@@ -2,6 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
+    host: 'http://api.ember-cli-101.com/',
     contentSecurityPolicy: {
       'img-src': "'self' www.fillmurray.com",
     },

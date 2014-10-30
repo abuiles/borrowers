@@ -1,6 +1,5 @@
 import DS from 'ember-data';
 import Ember from 'ember';
-import changeGate from 'ember-computed-change-gate/change-gate';
 
 export default DS.Model.extend({
   articles:      DS.hasMany('articles', {async: true}),
