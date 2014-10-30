@@ -2,11 +2,7 @@
 
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
-var app = new EmberApp({
-  fingerprint: {
-    prepend: 'https://d29sqib8gy.cloudfront.net/'
-  },
-});
+var app = new EmberApp({});
 
 app.import('vendor/fontello/fontello.css');
 app.import('vendor/fontello/font/fontello.ttf', {
