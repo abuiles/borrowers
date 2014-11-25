@@ -9,18 +9,8 @@
     </tr>
   </thead>
   <tbody>
-    {{#each itemController='articles/item'}}
-      <tr>
-        <td>{{description}}</td>
-        <td>{{notes}}</td>
-        <td>{{formatted-date createdAt 'LL'}}</td>
-        <td>{{view "select" content=states selection=state}}</td>
-        <td>
-          {{#if isSaving}}
-            <p>Saving ...</p>
-          {{/if}}
-        </td>
-      </tr>
+    {{#each article in model}}
+      {{article-row article=article save="save"}}
     {{/each}}
   </tbody>
 </table>

@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
-export default Ember.ObjectController.extend({
-  hasDescription: Ember.computed.notEmpty('description'),
+export default Ember.Controller.extend({
+  hasDescription: Ember.computed.notEmpty('model.description'),
   isValid: Ember.computed.and('hasDescription'),
   actions: {
     save: function() {
