@@ -1,6 +1,8 @@
 import Ember from 'ember';
 import { formatDate } from '../utils/date-helpers';
 
-export default Ember.Handlebars.makeBoundHelper(function(date, format) {
+export function formattedDate(date, format) {
   return formatDate(date, format);
-});
+}
+
+export default Ember.Handlebars.makeBoundHelper(formattedDate);

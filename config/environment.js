@@ -2,17 +2,14 @@
 
 module.exports = function(environment) {
   var ENV = {
-    host: 'http://api.ember-cli-101.com',
-    contentSecurityPolicy: {
-      'img-src': "'self' www.fillmurray.com",
-    },
     modulePrefix: 'borrowers',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
-        'ember-htmlbars': true
+        // Here you can enable experimental features on an ember canary build
+        // e.g. 'with-controller': true
       }
     },
 
@@ -23,17 +20,17 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
-    ENV.APP.LOG_RESOLVER = true;
+    // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-    ENV.APP.LOG_VIEW_LOOKUPS = true;
+    // ENV.APP.LOG_VIEW_LOOKUPS = true;
   }
 
   if (environment === 'test') {
     // Testem prefers this...
     ENV.baseURL = '/';
-    ENV.locationType = 'auto';
+    ENV.locationType = 'none';
 
     // keep test console output quieter
     ENV.APP.LOG_ACTIVE_GENERATION = false;
