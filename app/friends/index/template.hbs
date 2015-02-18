@@ -1,17 +1,17 @@
-<table class="primary">
+<table class="primary friends-table">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Articles</th>
+      <th {{action "setSortBy" "firstName"}}> Name</th>
+      <th {{action "setSortBy" "totalArticles"}}>Articles</th>
       <th></th>
     </tr>
   </thead>
   <tbody>
-    {{#each}}
-      <tr>
-        <td>{{link-to fullName "articles" this}}</td>
-        <td>{{totalArticles}}</td>
-        <td><a href="#" {{action "delete" this}}>delete</a></td>
+    {{#each friend in model}}
+      <tr class="friend-row">
+        <td>{{link-to friend.fullName "articles" friend.id}}</td>
+        <td>{{friend.totalArticles}}</td>
+        <td><a href="#" {{action "delete" friend}}>delete</a></td>
       </tr>
     {{/each}}
   </tbody>

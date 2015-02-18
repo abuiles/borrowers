@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
-export default Ember.ArrayController.extend({
+export default Ember.Controller.extend({
+  queryParams: ['show'],
+  possibleStates: ["borrowed", "returned"],
   contentDidChange: function() {
     console.log('Called when we add or removed an article.');
   }.observes('model.[]'),
