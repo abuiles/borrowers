@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import {module, test} from 'qunit';
 import startApp from '../../helpers/start-app';
 import Pretender from 'pretender';
 
@@ -6,7 +7,7 @@ var App;
 var server;
 
 module('Acceptance: FriendsNew', {
-  setup: function() {
+  beforeEach: function() {
     App = startApp();
 
     server = new Pretender(function(){
@@ -21,16 +22,16 @@ module('Acceptance: FriendsNew', {
       });
     });
   },
-  teardown: function() {
+  afterEach: function() {
     Ember.run(App, 'destroy');
   }
 });
 
-test('Creating a new friends', function() {
+test('Creating a new friends', function(assert) {
   visit('/friends/new');
   click('a[href="/friends/new"]');
   andThen(function() {
-    equal(currentPath(), 'friends.new');
+    assert.equal(currentPath(), 'friends.new');
   });
   fillIn('input[placeholder="First Name"]', 'Johnny');
   fillIn('input[placeholder="Last Name"]', 'Foo');
@@ -45,7 +46,7 @@ test('Creating a new friends', function() {
   //
 
   andThen(function() {
-    equal(find('.error-message').text(), 'Friend was not saved', 'shows error');
+    assert.equal(find('.error-message').text(), 'Friend was not saved', 'shows error');
     // equal(
     //   currentRouteName(),
     //   'friends.show.index',

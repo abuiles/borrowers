@@ -5,28 +5,28 @@ moduleForModel('friend', 'Friend', {
   needs: ['model:article']
 });
 
-test('it exists', function() {
+test('it exists', function(assert) {
   var model = this.subject();
-  ok(model);
+  assert.ok(model);
 });
 
-test('fullName concats first and last name', function() {
+test('fullName concats first and last name', function(assert) {
   var model = this.subject({firstName: 'Syd', lastName: 'Barrett'});
 
-  equal(model.get('fullName'), 'Syd Barrett');
+  assert.equal(model.get('fullName'), 'Syd Barrett');
 
   Ember.run(function() {
     model.set('firstName', 'Geddy');
   });
 
-  equal(model.get('fullName'), 'Geddy Barrett', 'Updates fullName');
+  assert.equal(model.get('fullName'), 'Geddy Barrett', 'Updates fullName');
 });
 
-test('articles relationship', function() {
+test('articles relationship', function(assert) {
   var klass  = this.subject({}).constructor;
 
   var relationship = Ember.get(klass, 'relationshipsByName').get('articles');
 
-  equal(relationship.key, 'articles');
-  equal(relationship.kind, 'hasMany');
+  assert.equal(relationship.key, 'articles');
+  assert.equal(relationship.kind, 'hasMany');
 });

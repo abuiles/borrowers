@@ -5,7 +5,7 @@ moduleFor('route:friends/new', 'FriendsNewRoute', {
   // needs: ['controller:foo']
 });
 
-test('it exists', function() {
+test('it exists', function(assert) {
   var route = this.subject();
-  ok(route);
+  assert.ok(route);
 });

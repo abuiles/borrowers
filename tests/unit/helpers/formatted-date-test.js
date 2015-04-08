@@ -2,6 +2,8 @@ import {
   formattedDate
 } from 'borrowers/helpers/formatted-date';
 
+import {module, test} from 'qunit';
+
 module('FormattedDateHelper');
 
 // Replace this with your real tests.
