@@ -11,6 +11,8 @@
     "qunit": "~1.17.1",
     "picnic": "~3.3.1",
     "moment": "~2.9.0",
-    "borrowers-dates": "~0.0.1"
+    "borrowers-dates": "~0.0.1",
+    "loader.js": "stefanpenner/loader.js#1.0.1",
+    "ember-resolver": "~0.1.7"
   }
 }
