@@ -1,0 +1,12 @@
+body {
+  display: block;
+  text-align: center;
+  color: #333;
+  background: #FFF;
+  margin: 80px auto;
+  width: 100%;
+}
+
+table {
+  width: 100%
+}
