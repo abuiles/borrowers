@@ -19,8 +19,8 @@ module.exports = function(defaults) {
     destDir: 'font'
   });
 
-  app.import('bower_components/picnic/releases/plugins.min.css');
   app.import('bower_components/picnic/releases/picnic.min.css');
+  app.import('bower_components/picnic/releases/plugins.min.css');
 
   return app.toTree();
 };
