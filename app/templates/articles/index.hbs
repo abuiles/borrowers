@@ -1,0 +1,20 @@
+<table class="primary">
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Borrowed since</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |article|}}
+      <tr>
+        <td>{{article.description}}</td>
+        <td>{{article.createdAt}}</td>
+        <td></td>
+        <td></td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
