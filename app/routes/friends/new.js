@@ -10,7 +10,7 @@ export default Ember.Route.extend({
   deactivate() {
     console.log('----- deactivate hook called -----');
   },
-  resetController: function (controller, isExiting, transition) {
+  resetController: function (controller, isExiting) {
     if (isExiting) {
       // We grab the model from the controller
       //
