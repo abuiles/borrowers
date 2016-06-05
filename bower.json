@@ -12,7 +12,6 @@
     "loader.js": "ember-cli/loader.js#3.2.0",
     "qunit": "~1.17.1",
     "picnic": "~4.1.1",
-    "moment": "~2.10.3",
     "borrowers-dates": "~0.0.1"
   }
 }
